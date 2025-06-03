@@ -26,6 +26,8 @@ namespace VirtualPdfPrinterPSA
         /// <inheritdoc/>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\psa-logs.txt", $"App.xaml -> OnLaunched method hit at {DateTime.Now}\r\n");
+
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active.
             if (Window.Current.Content is not Frame rootFrame)
