@@ -3,7 +3,7 @@
 	Uri="file:///C:/Work/DocuWare/docuware-v3/Publish/VirtualPdfPrinterPSA.appinstaller"
 	Version="1.0.0.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
 	<MainBundle
-		Name="1395b15f-6f78-4d79-886b-59c7e5bb1046"
+		Name="VirtualPdfPrinterPSA"
 		Version="1.0.0.0"
 		Publisher="CN=VirtualPdfPrinterPSA"
 		Uri="file:///C:/Work/DocuWare/docuware-v3/Publish/VirtualPdfPrinterPSA_1.0.0.0_Test/VirtualPdfPrinterPSA_1.0.0.0_x86.msixbundle" />
