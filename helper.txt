@@ -18,6 +18,10 @@ Get-Printer -Name "Virtual PDF Printer Queue Name" | Format-List *
 Add-AppxPackage "C:\Work\DocuWare\docuware-v3\Publish\VirtualPdfPrinterPSA_1.0.0.0_Test\VirtualPdfPrinterPSA_1.0.0.0_x86.msixbundle"
 
 
+#Find the AppUserModelId
+Get-StartApps | Where-Object { $_.Name -like "*VirtualPdfPrinterPSA*" }
+
+Start-Process "shell:appsFolder\1395b15f-6f78-4d79-886b-59c7e5bb1046_xbjkmx0xqdwrt!App"
 
 
 Add-AppxPackage VirtualPdfPrinterPSA.Package_1.0.1.0_x86.msix
