@@ -1,6 +1,6 @@
 # ------------------ CERTIFICATE CREATION ------------------
 
-$certFolder = "C:\Work\DocuWare\docuware-v2\Certificate"
+$certFolder = "C:\Work\DocuWare\docuware-v3\Certificate"
 $certName = "VirtualPdfPrinterPSA"
 $pfxPath = Join-Path $certFolder "$certName.pfx"
 $cerPath = Join-Path $certFolder "$certName.cer"

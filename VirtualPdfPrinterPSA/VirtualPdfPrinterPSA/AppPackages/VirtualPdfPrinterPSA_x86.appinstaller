@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///C:/Work/DocuWare/docuware-v3/Publish/VirtualPdfPrinterPSA_x86.appinstaller"
+	Version="1.0.0.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainPackage
+		Name="1395b15f-6f78-4d79-886b-59c7e5bb1046"
+		Version="1.0.0.0"
+		Publisher="CN=VirtualPdfPrinterPSA"
+		Uri="file:///C:/Work/DocuWare/docuware-v3/Publish/VirtualPdfPrinterPSA_1.0.0.0_x86_Debug_Test/VirtualPdfPrinterPSA_1.0.0.0_x86_Debug.msix"
+		ProcessorArchitecture="x86" />
+	<Dependencies>
+		<Package
+			Name="Microsoft.VCLibs.140.00.Debug"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x86"
+			Uri="file:///C:/Work/DocuWare/docuware-v3/Publish/VirtualPdfPrinterPSA_1.0.0.0_x86_Debug_Test/Dependencies/x86/Microsoft.VCLibs.x86.Debug.14.00.appx"
+			Version="14.0.33519.0" />
+	</Dependencies>
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>
