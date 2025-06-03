@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System;
+using Windows.UI.Xaml.Controls;
 
 namespace VirtualPdfPrinterPSA
 {
@@ -10,6 +11,9 @@ namespace VirtualPdfPrinterPSA
         public MainPage()
         {
             InitializeComponent();
+
+            //System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\Logs\psa-logs.txt", $"MainPage.xaml -> MainPage method hit at {DateTime.Now}\r\n");
+            System.IO.File.AppendAllText(System.IO.Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "psa-logs.txt"), $"MainPage.xaml -> MainPage method hit at {DateTime.Now}\r\n");
         }
     }
 }
