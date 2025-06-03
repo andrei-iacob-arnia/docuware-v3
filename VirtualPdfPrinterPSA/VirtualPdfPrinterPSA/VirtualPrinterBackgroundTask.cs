@@ -10,7 +10,7 @@ namespace VirtualPdfPrinterPSA
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\psa-logs.txt", $"VirtualPrinterBackgroundTask -> Run method hit at {DateTime.Now}\r\n");
+            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\Logs\psa-logs.txt", $"VirtualPrinterBackgroundTask -> Run method hit at {DateTime.Now}\r\n");
 
             // Take Task Deferral            
             taskDeferral = taskInstance.GetDeferral();
@@ -27,7 +27,7 @@ namespace VirtualPdfPrinterPSA
 
         private void OnJobStarting(PrintWorkflowJobBackgroundSession session, PrintWorkflowJobStartingEventArgs args)
         {
-            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\psa-logs.txt", $"VirtualPrinterBackgroundTask -> OnJobStarting method hit at {DateTime.Now}\r\n");
+            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\Logs\psa-logs.txt", $"VirtualPrinterBackgroundTask -> OnJobStarting method hit at {DateTime.Now}\r\n");
 
             using (args.GetDeferral())
             {
@@ -39,7 +39,7 @@ namespace VirtualPdfPrinterPSA
 
         private async void OnPdlModificationRequested(PrintWorkflowJobBackgroundSession session, PrintWorkflowPdlModificationRequestedEventArgs args)
         {
-            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\psa-logs.txt", $"VirtualPrinterBackgroundTask -> OnPdlModificationRequested method hit at {DateTime.Now}\r\n");
+            System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\Logs\psa-logs.txt", $"VirtualPrinterBackgroundTask -> OnPdlModificationRequested method hit at {DateTime.Now}\r\n");
 
             using (args.GetDeferral())
             {
