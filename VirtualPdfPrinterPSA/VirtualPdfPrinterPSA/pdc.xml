@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PrintDeviceCapabilities xmlns="http://schemas.microsoft.com/windows/2013/06/printing/printdevicecapabilities">
+  <!-- Document formats the printer supports -->
+  <DocumentFormat>application/oxps</DocumentFormat>
+  <DocumentFormat>application/pdf</DocumentFormat>
+
+  <!-- Basic paper size -->
+  <PageMediaSize>
+    <Width>210000</Width>
+    <!-- in microns (A4 width = 210mm) -->
+    <Height>297000</Height>
+    <!-- in microns (A4 height = 297mm) -->
+    <MediaSizeName>ISOA4</MediaSizeName>
+  </PageMediaSize>
+
+  <!-- Simple resolution -->
+  <PageResolution>
+    <XResolution>600</XResolution>
+    <YResolution>600</YResolution>
+    <QualitativeResolution>Normal</QualitativeResolution>
+  </PageResolution>
+
+  <!-- Basic color support -->
+  <ColorMode>Monochrome</ColorMode>
+</PrintDeviceCapabilities>

@@ -13,4 +13,10 @@
     <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="pdc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pdc.xml" />
+  </ItemGroup>
 </Project>
