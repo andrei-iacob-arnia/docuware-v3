@@ -1,0 +1,41 @@
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+ClassGuid={4D36E979-E325-11CE-BFC1-08002BE10318}
+Provider=%ProviderName%
+DriverVer=06/01/2024,1.0.0.0
+CatalogFile=VirtualPdfPrinter.cat
+
+[Manufacturer]
+%MfgName% = ModelSection,NTx86,NTamd64
+
+[ModelSection.NTamd64]
+"Virtual PDF Printer" = Install,VirtualPDFPrinterQueueNamePort:
+
+[ModelSection.NTx86]
+"Virtual PDF Printer" = Install,VirtualPDFPrinterQueueNamePort:
+
+[Install]
+; Removed CopyFiles to avoid CAT generation failure
+DataSection=PSAData
+DriverFile=xpsprint.dll
+ConfigFile=xpsui.dll
+
+[PSAData]
+PrintProcessor="winprint"
+PrintProcessorDataType="RAW"
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+[SourceDisksNames]
+1 = %DiskName%,,,
+
+[SourceDisksFiles]
+xpsprint.dll=1
+xpsui.dll=1
+
+[Strings]
+ProviderName="Your Company"
+MfgName="Your Company"
+DiskName="Virtual Printer Driver Disk"
