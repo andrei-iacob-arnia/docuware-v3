@@ -25,3 +25,8 @@ Start-Process "shell:appsFolder\VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
 
 
 Add-AppxPackage VirtualPdfPrinterPSA.Package_1.0.1.0_x86.msix
+
+
+
+
+Get-PrinterDriver | Where-Object Name -eq "VirtualPDFPrinterDriver"

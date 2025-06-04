@@ -13,10 +13,10 @@ PackageAware=TRUE
 %MfgName% = ModelSection,NTx86,NTamd64
 
 [ModelSection.NTamd64]
-"Virtual PDF Printer" = Install,VirtualPDFPrinterQueueNamePort:
+"VirtualPDFPrinterDriver" = Install,VirtualPDFPrinterQueueNamePort:
 
 [ModelSection.NTx86]
-"Virtual PDF Printer" = Install,VirtualPDFPrinterQueueNamePort:
+"VirtualPDFPrinterDriver" = Install,VirtualPDFPrinterQueueNamePort:
 
 [Install]
 DataSection=PSAData
@@ -38,9 +38,9 @@ xpsprint.dll=1
 xpsui.dll=1
 
 [PrintDriverPSA]
-PrintSupportApp=VirtualPdfPrinterPSA_1.0.0.0_x86__xbjkmx0xqdwrt!App
+PrintSupportApp=VirtualPdfPrinterPSA_xbjkmx0xqdwrt
 
 [Strings]
-ProviderName="Your Company"
-MfgName="Your Company"
-DiskName="Virtual Printer Driver Disk"
+ProviderName="VirtualPdfPrinterDriver"
+MfgName="VirtualPdfPrinterDriver"
+DiskName="VirtualPdfPrinterDriverDisk"

@@ -1,6 +1,6 @@
 # ------------------ CONFIG ------------------
 $printerName = "VirtualPDFPrinterQueueName"
-$driverName  = "Microsoft XPS Document Writer v4"
+$driverName  = "VirtualPDFPrinterDriver"
 $portName    = "VirtualPDFPrinterQueueNamePort:"
 # -------------------------------------------
 
