@@ -1,0 +1,1 @@
+pnputil /add-driver "C:\Work\DocuWare\docuware-v3\CustomDriver\VirtualPdfPrinter.inf" /install
