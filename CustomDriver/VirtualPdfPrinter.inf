@@ -6,6 +6,9 @@ Provider=%ProviderName%
 DriverVer=06/01/2024,1.0.0.0
 CatalogFile=VirtualPdfPrinter.cat
 
+[PrinterPackageInstallation]
+PackageAware=TRUE
+
 [Manufacturer]
 %MfgName% = ModelSection,NTx86,NTamd64
 
@@ -16,7 +19,6 @@ CatalogFile=VirtualPdfPrinter.cat
 "Virtual PDF Printer" = Install,VirtualPDFPrinterQueueNamePort:
 
 [Install]
-; Removed CopyFiles to avoid CAT generation failure
 DataSection=PSAData
 DriverFile=xpsprint.dll
 ConfigFile=xpsui.dll
@@ -34,6 +36,9 @@ DefaultDestDir=66000
 [SourceDisksFiles]
 xpsprint.dll=1
 xpsui.dll=1
+
+[PrintDriverPSA]
+PrintSupportApp=VirtualPdfPrinterPSA_1.0.0.0_x86__xbjkmx0xqdwrt!App
 
 [Strings]
 ProviderName="Your Company"

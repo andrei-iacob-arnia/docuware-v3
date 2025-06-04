@@ -72,5 +72,6 @@
     <Capability Name="internetClient" />
     <rescap:Capability Name="printSupportApp" />
     <uap:Capability Name="userAccountInformation"/>
+    <uap:Capability Name="documentsLibrary" />
   </Capabilities>
 </Package>

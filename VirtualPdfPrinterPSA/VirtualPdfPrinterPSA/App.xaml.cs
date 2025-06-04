@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -27,7 +29,9 @@ namespace VirtualPdfPrinterPSA
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             //System.IO.File.AppendAllText(@"C:\Work\DocuWare\docuware-v3\Logs\psa-logs.txt", $"App.xaml -> OnLaunched method hit at {DateTime.Now}\r\n");
-            System.IO.File.AppendAllText(System.IO.Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "psa-logs.txt"), $"App.xaml -> OnLaunched method hit at {DateTime.Now}\r\n");
+            var folder = Windows.Storage.KnownFolders.DocumentsLibrary;
+            var file = folder.CreateFileAsync("psa-logs.txt", CreationCollisionOption.OpenIfExists).GetAwaiter().GetResult();
+            Windows.Storage.FileIO.AppendTextAsync(file, $"App.xaml -> OnLaunched method hit at {DateTime.Now}\r\n");
 
 
             // Do not repeat app initialization when the Window already has content,
@@ -88,7 +92,9 @@ namespace VirtualPdfPrinterPSA
 
         protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
         {
-            System.IO.File.AppendAllText(System.IO.Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "psa-logs.txt"), $"App.xaml -> OnLOnBackgroundActivated method hit at {DateTime.Now}\r\n");
+            var folder = Windows.Storage.KnownFolders.DocumentsLibrary;
+            var file = folder.CreateFileAsync("psa-logs.txt", CreationCollisionOption.OpenIfExists).GetAwaiter().GetResult();
+            Windows.Storage.FileIO.AppendTextAsync(file, $"App.xaml -> OnLOnBackgroundActivated method hit at {DateTime.Now}\r\n");
         }
     }
 }
