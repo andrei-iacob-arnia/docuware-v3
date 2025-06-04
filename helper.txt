@@ -30,3 +30,10 @@ Add-AppxPackage VirtualPdfPrinterPSA.Package_1.0.1.0_x86.msix
 
 
 Get-PrinterDriver | Where-Object Name -eq "VirtualPDFPrinterDriver"
+
+
+pnputil /enum-drivers
+
+
+
+pnputil /delete-driver oem10.inf /uninstall /force

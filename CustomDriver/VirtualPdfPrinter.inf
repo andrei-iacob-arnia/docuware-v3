@@ -27,6 +27,9 @@ SoftwareID = pfn://%PackageFamilyName%
 [Add-PSA-Property]
 {A925764B-88E0-426D-AFC5-B39768BE59EB}, 1, 0x12,, %AUMID%
 
+[ModelSection.NTamd64]
+"VirtualPDFPrinterDriver" = InstallSection, ROOT\VIRTUALPDFPRINTERPSAHARDWAREID
+
 [Strings]
 ManufacturerName = "DocuWare"
 SoftwareName = "VirtualPdfPrinterPSA"
@@ -34,4 +37,4 @@ Device.ExtensionDesc = "VirtualPdfPrinterPSA Extension Description"
 MicrosoftStoreType = 2
 PackageFamilyName = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt"
 AUMID = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
-PrinterHardwareId = "ROOT\\VIRTUALPDFPRINTERPSAHARDWAREID"
+PrinterHardwareId = "ROOT\VIRTUALPDFPRINTERPSAHARDWAREID"
