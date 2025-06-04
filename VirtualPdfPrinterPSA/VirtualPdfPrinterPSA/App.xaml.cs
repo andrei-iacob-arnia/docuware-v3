@@ -85,5 +85,10 @@ namespace VirtualPdfPrinterPSA
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            System.IO.File.AppendAllText(System.IO.Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "psa-logs.txt"), $"App.xaml -> OnLOnBackgroundActivated method hit at {DateTime.Now}\r\n");
+        }
     }
 }
