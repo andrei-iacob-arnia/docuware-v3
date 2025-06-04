@@ -1,6 +1,6 @@
 # ------------------ CONFIG ------------------
 $printerName = "VirtualPDFPrinterQueueName"
-$driverName  = "VirtualPDFPrinterDriver"
+$driverName  = "VirtualPdfPrinterPSA"
 $portName    = "VirtualPDFPrinterQueueNamePort:"
 # -------------------------------------------
 
