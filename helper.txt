@@ -36,4 +36,4 @@ pnputil /enum-drivers
 
 
 
-pnputil /delete-driver oem10.inf /uninstall /force
+pnputil /delete-driver oem0.inf /uninstall /force
