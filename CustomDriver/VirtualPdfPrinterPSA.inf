@@ -2,35 +2,36 @@
 Signature = "$WINDOWS NT$"
 Class = Extension
 ClassGuid = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
-Provider = %Provider%
+Provider = %ManufacturerName%
 ExtensionId = {D4D9196A-105B-4B76-B693-84BD33A7A703}
 CatalogFile = virtualpdfprinter.cat
-DriverVer = 06/01/2024,1.0.0.0
+DriverVer = 05/19/2020,16.35.13.542
 PnpLockdown = 1
 
 [Manufacturer]
-%Provider% = XPSBindSection,NTamd64
+%ManufacturerName% = Microsoft, NTamd64.6.3
 
-[XPSBindSection.NTamd64]
-%ExtensionDesc% = PSAInstall, XPSPRINT\Microsoft_XPS_Document_Writer_v4
+[Microsoft.NTamd64.6.3]
+%Device.ExtensionDesc% = PSA-Install, %PrinterHardwareId%
 
-[PSAInstall.NT]
+[PSA-Install.NT]
 AddProperty = Add-PSA-Property
 
-[PSAInstall.NT.Software]
+[PSA-Install.NT.Software]
 AddSoftware = %SoftwareName%,, Microsoft-PSA-SoftwareInstall
 
 [Microsoft-PSA-SoftwareInstall]
-SoftwareType = 2
+SoftwareType = %MicrosoftStoreType%
 SoftwareID = pfn://%PackageFamilyName%
 
 [Add-PSA-Property]
-; Binds to the PSA via AUMID
 {A925764B-88E0-426D-AFC5-B39768BE59EB}, 1, 0x12,, %AUMID%
 
 [Strings]
-Provider = "Your Company"
-ExtensionDesc = "PSA Extension for XPS Writer"
-SoftwareName = "XpsPsaBinding"
+ManufacturerName = "Microsoft"
+SoftwareName = "Microsoft Print Support App"
+Device.ExtensionDesc = "Print Support App Extension"
+MicrosoftStoreType = 2
 PackageFamilyName = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt"
 AUMID = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
+PrinterHardwareId = "ROOT\PSA_MyVirtualPrinter"

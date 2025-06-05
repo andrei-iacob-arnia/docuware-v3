@@ -1,0 +1,27 @@
+*GPDFileVersion: "1.0"
+*GPDSpecVersion: "1.0"
+*ModelName: "Virtual PDF Printer"
+*PrinterType: PAGE
+*DefaultResolution: 600dpi
+*PrintRate: 10
+*PrintRateUnit: PPM
+*PrintMemory: 1024KB
+
+*Resolution: 600dpi
+*DPI: 600
+*TextDPI: 600
+
+*Feature: PaperSize
+{
+    *Name: "A4"
+    *Option: A4
+    {
+        *Name: "A4"
+        *PrintableArea: PAIR(595,842)
+        *PrintableOrigin: PAIR(0,0)
+        *CursorOrigin: PAIR(0,0)
+        *PageDimensions: PAIR(595,842)
+    }
+}
+
+*LanguageMonitor: "PJL Language Monitor,PJLMon.dll"
