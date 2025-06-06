@@ -34,4 +34,4 @@ Device.ExtensionDesc = "Print Support App Extension"
 MicrosoftStoreType = 2
 PackageFamilyName = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt"
 AUMID = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
-PrinterHardwareId = "PRINTENUM\\{65dc841b-bf37-4e93-b61e-ea34823d679f}"
+PrinterHardwareId = "ROOT\\PSA_VirtualPdfPrinterDriver"
