@@ -1,7 +1,7 @@
 # ------------------ CONFIG ------------------
-$infPath          = "C:\Work\DocuWare\docuware-v3\CustomDriver\VirtualPdfPrinterDriver.inf"
+$infPath          = "C:\Work\DocuWare\docuware-v3\CustomDriver\VirtualPdfPrinterPSA.inf"
 $printerDriverDir = Split-Path $infPath
-$catOutputPath    = Join-Path $printerDriverDir "VirtualPdfPrinterDriver.cat"
+$catOutputPath    = Join-Path $printerDriverDir "VirtualPdfPrinterPSA.cat"
 
 # ✅ Correct path to the certificate
 $pfxPath          = "C:\Work\DocuWare\docuware-v3\Certificate\VirtualPdfPrinterPSA.pfx"

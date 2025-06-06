@@ -1,6 +1,6 @@
 *GPDFileVersion: "1.0"
 *GPDSpecVersion: "1.0"
-*ModelName: "Virtual PDF Printer"
+*ModelName: "VirtualPdfPrinterDriver"
 *PrinterType: PAGE
 *DefaultResolution: 600dpi
 *PrintRate: 10

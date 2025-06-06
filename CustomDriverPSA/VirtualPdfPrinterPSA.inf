@@ -4,7 +4,7 @@ Class = Extension
 ClassGuid = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
 Provider = %ManufacturerName%
 ExtensionId = {D4D9196A-105B-4B76-B693-84BD33A7A703}
-CatalogFile = virtualpdfprinter.cat
+CatalogFile = virtualpdfprinterpsa.cat
 DriverVer = 05/19/2020,16.35.13.542
 PnpLockdown = 1
 
@@ -34,4 +34,4 @@ Device.ExtensionDesc = "Print Support App Extension"
 MicrosoftStoreType = 2
 PackageFamilyName = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt"
 AUMID = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
-PrinterHardwareId = "ROOT\PSA_MyVirtualPrinter"
+PrinterHardwareId = "PRINTENUM\\{65dc841b-bf37-4e93-b61e-ea34823d679f}"

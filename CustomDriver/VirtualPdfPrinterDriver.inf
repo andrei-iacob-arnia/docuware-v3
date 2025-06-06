@@ -4,20 +4,26 @@ Class=Printer
 ClassGuid={4D36E979-E325-11CE-BFC1-08002BE10318}
 Provider=%Provider%
 DriverVer=06/01/2025,1.0.0.0
-CatalogFile=VirtualPdfPrinter.cat
+CatalogFile=virtualpdfprinterdriver.cat
 
 [Manufacturer]
 %Provider% = ModelSection, NTamd64
 
 [ModelSection.NTamd64]
-%PrinterName% = InstallSection, ROOT\PSA_MyVirtualPrinter
+%PrinterName% = InstallSection, ROOT\PSA_VirtualPdfPrinterDriver
 
 [InstallSection]
-CopyFiles=@VirtualPdfPrinter.gpd
-DataFile=VirtualPdfPrinter.gpd
+CopyFiles=@VirtualPdfPrinterDriver.gpd
+DataFile=VirtualPdfPrinterDriver.gpd
 Include=ntprint.inf
 Needs=UNIDRV.OEM
 
+[SourceDisksFiles]
+VirtualPdfPrinterDriver.gpd=1
+
+[SourceDisksNames]
+1 = "Virtual PDF Printer Driver Files",,, 
+
 [Strings]
 Provider="DocuWare"
-PrinterName="Virtual PDF Printer"
+PrinterName="VirtualPdfPrinterDriver"
