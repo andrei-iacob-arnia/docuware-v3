@@ -6,7 +6,10 @@ Get-AppxPackage *VirtualPdfPrinterPSA*
 Get-AppxPackage *VirtualPdfPrinterPSA* | Remove-AppxPackage
 
 # Remove printer queue
-Remove-Printer -Name "Virtual PDF Printer Queue Name"
+Remove-Printer -Name "VirtualPdfPSA1"
+
+# Remove printer port
+Remove-PrinterPort -Name "VirtualPdfPSAPort1"
 
 
 
@@ -15,7 +18,7 @@ Get-Printer -Name "Virtual PDF Printer Queue Name" | Format-List *
 
 # Reinstall the app (MSIX)
 
-Add-AppxPackage "C:\Work\DocuWare\docuware-v3\Publish\VirtualPdfPrinterPSA_1.0.0.0_Test\VirtualPdfPrinterPSA_1.0.0.0_x86.msixbundle"
+Add-AppxPackage "C:\Work\DocuWare\docuware-v3\Publish\VirtualPdfPrinterPSA_1.0.0.0_Test\VirtualPdfPrinterPSA_1.0.0.0_x64.msixbundle"
 
 
 #Find the AppUserModelId
@@ -27,6 +30,9 @@ Start-Process "shell:appsFolder\VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
 Add-AppxPackage VirtualPdfPrinterPSA.Package_1.0.1.0_x86.msix
 
 
+# Path
+Get-AppxPackage -Name VirtualPdfPrinterPSA | Select-Object InstallLocation
+
 
 
 Get-PrinterDriver | Where-Object Name -eq "VirtualPDFPrinterDriver"
@@ -37,3 +43,6 @@ pnputil /enum-drivers
 
 
 pnputil /delete-driver oem0.inf /uninstall /force
+
+
+Get-ComputerInfo | Select OsName, OsVersion, OsBuildNumber

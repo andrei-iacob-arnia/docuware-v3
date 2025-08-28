@@ -1,77 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows/10/10"
   xmlns:uap11="http://schemas.microsoft.com/appx/manifest/uap/windows/10/11"
   xmlns:printsupport="http://schemas.microsoft.com/appx/manifest/printsupport/windows10"
   xmlns:printsupport2="http://schemas.microsoft.com/appx/manifest/printsupport/windows10/2"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
   xmlns:iot2="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"
-  IgnorableNamespaces="uap mp rescap printsupport2">
+  IgnorableNamespaces="uap uap11 rescap printsupport printsupport2">
 
-  <Identity
-    Name="VirtualPdfPrinterPSA"
-    Publisher="CN=VirtualPdfPrinterPSA"
-    Version="1.0.0.0" />
+	<Identity Name="VirtualPdfPrinterPSA" Publisher="CN=VirtualPdfPrinterPSA" Version="1.0.0.0" />
 
-  <Properties>
-    <DisplayName>VirtualPdfPrinterPSA</DisplayName>
-    <PublisherDisplayName>andreii</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
-  </Properties>
+	<Properties>
+		<DisplayName>VirtualPdfPrinterPSA</DisplayName>
+		<PublisherDisplayName>andreii</PublisherDisplayName>
+		<Logo>Assets\StoreLogo.png</Logo>
+	</Properties>
 
-  <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
-  </Dependencies>
+	<Dependencies>
+		<TargetDeviceFamily Name="Windows.Universal"
+							MinVersion="10.0.26100.0"
+							MaxVersionTested="10.0.26100.0" />
+	</Dependencies>
 
-  <Resources>
-    <Resource Language="x-generate"/>
-  </Resources>
+	<Resources>
+		<Resource Language="en-US" />
+	</Resources>
 
-  <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="VirtualPdfPrinterPSA.App"
-      desktop4:SupportsMultipleInstances="true"
-      iot2:SupportsMultipleInstances="true">
-      <uap:VisualElements
-        DisplayName="VirtualPdfPrinterPSA"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="VirtualPdfPrinterPSA"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
-      </uap:VisualElements>
-      <Extensions>
-        <printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow"
-                                 EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask">
-          <printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPDFPrinterQueueName"
-                                                    PrinterUri="VirtualPDFPrinterQueueNamePort:"
-                                                    PreferredInputFormat="application/postscript"
-                                                    OutputFileTypes="ps;pdf"
-                                                    PdcFile="pdc.xml">
-            <printsupport2:SupportedFormats>
-              <printsupport2:SupportedFormat Type="application/postscript" />
-              <printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
-            </printsupport2:SupportedFormats>
-          </printsupport2:PrintSupportVirtualPrinter>
-        </printsupport2:Extension>
-        <printsupport:Extension Category="windows.printSupportExtension" EntryPoint="VirtualPdfPrinterPSA.VirtualPrinterBackgroundTask"/>
-        <printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="VirtualPdfPrinterPSA.App" />
-        <printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="VirtualPdfPrinterPSA.App" />
-      </Extensions>
-    </Application>
-  </Applications>
+	<Applications>
+		<Application
+		  Id="App"
+		  Executable="VirtualPdfPrinterPSA.exe"
+		  EntryPoint="VirtualPdfPrinterPSA.App"
+		  desktop4:SupportsMultipleInstances="true"
+		  iot2:SupportsMultipleInstances="true">
 
-  <Capabilities>
-    <Capability Name="internetClient" />
-    <rescap:Capability Name="printSupportApp" />
-    <uap:Capability Name="userAccountInformation"/>
-    <uap:Capability Name="documentsLibrary" />
-  </Capabilities>
+			<uap:VisualElements
+			  DisplayName="VirtualPdfPrinterPSA"
+			  Square150x150Logo="Assets\Square150x150Logo.png"
+			  Square44x44Logo="Assets\Square44x44Logo.png"
+			  Description="VirtualPdfPrinterPSA"
+			  BackgroundColor="transparent" />
+
+			<Extensions>
+				<printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow" EntryPoint="VirtualPdfPrinterPSA.Tasks.VirtualPrinterBackgroundTask">
+					<printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPdfPSA" PrinterUri="virtualpdfpsa:printer1" PreferredInputFormat="application/postscript" OutputFileTypes="ps;pdf" PdcFile="Config\pdc.xml">
+						<printsupport2:SupportedFormats>
+							<printsupport2:SupportedFormat Type="application/postscript" />
+							<printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
+						</printsupport2:SupportedFormats>
+					</printsupport2:PrintSupportVirtualPrinter>
+				</printsupport2:Extension>
+				<printsupport:Extension Category="windows.printSupportExtension" EntryPoint="VirtualPdfPrinterPSA.Tasks.VirtualPrinterBackgroundTask"/>
+				<printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="VirtualPdfPrinterPSA.App"/>
+				<printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="VirtualPdfPrinterPSA.App"/>
+			</Extensions>
+		</Application>
+	</Applications>
+
+	<Capabilities>
+		<Capability Name="internetClient" />
+		<uap:Capability Name="userAccountInformation" />
+		<uap:Capability Name="documentsLibrary" />
+		<rescap:Capability Name="printSupportApp" />
+	</Capabilities>
 </Package>

@@ -1,0 +1,1 @@
+MainPackage=C:\Work\DocuWare\docuware-v3\VirtualPdfPrinterPSA\VirtualPdfPrinterPSA\bin\x64\Release\net8.0-windows10.0.26100.0\win-x64\VirtualPdfPrinterPSA_1.0.0.0_x64.msix

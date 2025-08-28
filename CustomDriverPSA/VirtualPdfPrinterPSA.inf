@@ -13,8 +13,6 @@ PnpLockdown = 1
 
 [Microsoft.NTamd64.6.3]
 %Device.ExtensionDesc% = PSA-Install, %PrinterHardwareId%
-%Device.ExtensionDesc% = PSA-Install, %PrinterHardwareId1%
-%Device.ExtensionDesc% = PSA-Install, %PrinterHardwareId2%
 
 [PSA-Install.NT]
 AddProperty = Add-PSA-Property
@@ -36,6 +34,4 @@ Device.ExtensionDesc = "Print Support App Extension"
 MicrosoftStoreType = 2
 PackageFamilyName = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt"
 AUMID = "VirtualPdfPrinterPSA_xbjkmx0xqdwrt!App"
-PrinterHardwareId = "PRINTENUM\\{b71661f4-a4dc-43df-bc16-39d337d15a95}"
-PrinterHardwareId1 = "PRINTENUM\\LocalPrintQueue"
-PrinterHardwareId2 = "b71661f4-a4dc-43df-bc16-39d337d15a95"
+PrinterHardwareId = "PRINTENUM\\LocalPrintQueue"
