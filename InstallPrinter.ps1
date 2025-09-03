@@ -1,7 +1,7 @@
 # ------------------ CONFIG ------------------
-$printerName = "VirtualPdfPSA1" #"VirtualPDFPrinterQueueName"
+$printerName = "VirtualPdfPSA" #"VirtualPDFPrinterQueueName"
 $driverName  = "Microsoft IPP Class Driver" #"Microsoft XPS Document Writer v4"
-$portName    = "VirtualPdfPSAPort" #"VirtualPDFPrinterQueueNamePort:"
+$portName    = "virtualpdfpsa:printer1" #"VirtualPDFPrinterQueueNamePort:"
 # -------------------------------------------
 
 Write-Host "[INFO] Removing existing printer (if it exists)..."

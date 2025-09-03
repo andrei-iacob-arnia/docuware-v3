@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///C:/Work/DocuWare/docuware-v3/Publish1/VirtualPdfPrinterPSA1.Package.appinstaller"
+	Version="1.0.0.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainBundle
+		Name="VirtualPdfPrinterPSA1"
+		Version="1.0.0.0"
+		Publisher="CN=VirtualPdfPrinterPSA"
+		Uri="file:///C:/Work/DocuWare/docuware-v3/Publish1/VirtualPdfPrinterPSA1.Package_1.0.0.0_Test/VirtualPdfPrinterPSA1.Package_1.0.0.0_x64.msixbundle" />
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>

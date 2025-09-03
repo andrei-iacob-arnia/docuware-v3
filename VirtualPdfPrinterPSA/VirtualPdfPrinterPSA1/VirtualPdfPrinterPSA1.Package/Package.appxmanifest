@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:printsupport="http://schemas.microsoft.com/appx/manifest/printsupport/windows10"
+  xmlns:printsupport2="http://schemas.microsoft.com/appx/manifest/printsupport/windows10/2"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+  xmlns:iot2="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"
+  IgnorableNamespaces="mp uap printsupport printsupport2 rescap desktop4 iot2">
+
+	<Identity Name="VirtualPdfPrinterPSA1" Publisher="CN=VirtualPdfPrinterPSA1" Version="1.0.0.0" />
+
+	<mp:PhoneIdentity PhoneProductId="ab15d7bb-7232-4e21-82a4-f2a81f50bcc3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+	<Properties>
+		<DisplayName>VirtualPdfPrinterPSA1.Package</DisplayName>
+		<PublisherDisplayName>AndreiIacob</PublisherDisplayName>
+		<Logo>Assets\StoreLogo.png</Logo>
+	</Properties>
+
+	<Dependencies>
+		<TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+
+	<Resources>
+		<Resource Language="x-generate"/>
+	</Resources>
+
+	<Applications>
+		<Application Id="App"
+		  Executable="$targetnametoken$.exe"
+		  EntryPoint="VirtualPdfPrinterPSA1.Package.App"
+		  desktop4:SupportsMultipleInstances="true"
+		  iot2:SupportsMultipleInstances="true">
+			<uap:VisualElements
+			  DisplayName="VirtualPdfPrinterPSA1.Package"
+			  Square150x150Logo="Assets\Square150x150Logo.png"
+			  Square44x44Logo="Assets\Square44x44Logo.png"
+			  Description="VirtualPdfPrinterPSA1.Package"
+			  BackgroundColor="transparent">
+				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+				<uap:SplashScreen Image="Assets\SplashScreen.png" />
+			</uap:VisualElements>
+
+			<Extensions>
+				<printsupport2:Extension Category="windows.printSupportVirtualPrinterWorkflow" EntryPoint="VirtualPdfPrinterPSA1.Tasks.VirtualPrinterBackgroundTask">
+					<printsupport2:PrintSupportVirtualPrinter DisplayName="VirtualPdfPSA" PrinterUri="virtualpdfpsa:printer1" PreferredInputFormat="application/postscript" OutputFileTypes="ps;pdf" PdcFile="Config\pdc.xml">
+						<printsupport2:SupportedFormats>
+							<printsupport2:SupportedFormat Type="application/postscript" />
+							<printsupport2:SupportedFormat Type="application/pdf" MaxVersion="1.7" />
+						</printsupport2:SupportedFormats>
+					</printsupport2:PrintSupportVirtualPrinter>
+				</printsupport2:Extension>
+				<printsupport:Extension Category="windows.printSupportExtension" EntryPoint="VirtualPdfPrinterPSA1.Tasks.VirtualPrinterBackgroundTask"/>
+				<printsupport:Extension Category="windows.printSupportSettingsUI" EntryPoint="VirtualPdfPrinterPSA1.App"/>
+				<printsupport:Extension Category="windows.printSupportJobUI" EntryPoint="VirtualPdfPrinterPSA1.App"/>
+			</Extensions>
+
+		</Application>
+	</Applications>
+
+	<Capabilities>
+		<Capability Name="internetClient" />
+		<uap:Capability Name="userAccountInformation" />
+		<uap:Capability Name="documentsLibrary" />
+		<rescap:Capability Name="printSupportApp" />
+	</Capabilities>
+</Package>

@@ -21,6 +21,9 @@ Get-Printer -Name "Virtual PDF Printer Queue Name" | Format-List *
 Add-AppxPackage "C:\Work\DocuWare\docuware-v3\Publish\VirtualPdfPrinterPSA_1.0.0.0_Test\VirtualPdfPrinterPSA_1.0.0.0_x64.msixbundle"
 
 
+Add-AppxPackage "C:\Work\DocuWare\docuware-v3\Publish1\VirtualPdfPrinterPSA1.Package_1.0.0.0_Test\VirtualPdfPrinterPSA1.Package_1.0.0.0_x64.msixbundle"
+
+
 #Find the AppUserModelId
 Get-StartApps | Where-Object { $_.Name -like "*VirtualPdfPrinterPSA*" }
 
@@ -46,3 +49,20 @@ pnputil /delete-driver oem0.inf /uninstall /force
 
 
 Get-ComputerInfo | Select OsName, OsVersion, OsBuildNumber
+
+
+net stop spooler
+net start spooler
+
+
+Get-AppxPackage -AllUsers Microsoft.VCLibs.140.00* |
+  Select Name, Version, Architecture, PackageFullName |
+  Sort-Object Name, Version
+  
+  
+  
+Get-AppxPackage -AllUsers Microsoft.VCLibs.140.00*  
+  
+  
+  
+  Package Microsoft.VCLibs

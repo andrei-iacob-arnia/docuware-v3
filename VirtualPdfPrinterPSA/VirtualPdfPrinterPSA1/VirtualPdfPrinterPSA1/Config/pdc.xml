@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<psf2:PrintDeviceCapabilities
+  xmlns:psk="http://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords"
+  xmlns:psf="http://schemas.microsoft.com/windows/2003/08/printing/printschemaframework"
+  xmlns:psf2="http://schemas.microsoft.com/windows/2013/12/printing/printschemaframework2"
+  version="2">
+	<psf2:CapabilitiesChangeID>617e6418-6847-4fa1-bec6-3a3668d09f6d</psf2:CapabilitiesChangeID>
+	<psf:Feature name="psk:PageMediaSize">
+		<psf:Option name="psk:ISOA4"/>
+	</psf:Feature>
+	<psf:Feature name="psk:Orientation">
+		<psf:Option name="psk:Portrait"/>
+	</psf:Feature>
+</psf2:PrintDeviceCapabilities>
